@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Clinical Activity Score (CAS) Calculator </title>
+<link href ="style.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src = "CAS2.js"></script>
+
+</head>
+
+
+<body>
+
+<div class ="header1"></div>
+
+<div class = "maincal">
+<div class ="sidecolumn"></div>
+<div class = "maincolumn">
+    <h1>Clinical Activity Score (CAS) Calculator</h1>
+    <div class = "whentousecolumn"><p>When to use</p></div>
+
+    <form id="quiz" name = "quiz">
+    <div class = "questioncontainer">
+            <div class ="question"> <p>Spontaneous eye pain?</p></div>
+            <div class = "questionyesno">
+            <label>
+        <input  type="radio"  name = question1 value ="yes">
+        <span class = "yes_span" >yes</span>
+            </label>
+            <label>
+            <input  type="radio"  name = question1 value ="no">
+            <span class = "no_span" >no</span>
+                </label>
+            </div>
+            </div>
+    <div class = "questioncontainer">
+                <div class ="question"> <p>Evoke eye pain?</p></div>
+                <div class = "questionyesno">
+                <label>
+            <input  type="radio"  name = question2 value ="yes">
+            <span class = "yes_span" >yes</span>
+                </label>
+                <label>
+                <input  type="radio"  name = question2 value ="no">
+                <span class = "no_span" >no</span>
+                    </label>
+                </div>
+                </div>
+
+    <div class = "questioncontainer">
+                    <div class ="question"> <p>Eyelid Swelling?</p></div>
+                    <div class = "questionyesno">
+                    <label>
+                <input  type="radio"  name = question3 value ="yes">
+                <span class = "yes_span" >yes</span>
+                    </label>
+                    <label>
+                    <input  type="radio"  name = question3 value ="no">
+                    <span class = "no_span" >no</span>
+                        </label>
+                    </div>
+                    </div>
+
+    <div class = "questioncontainer">
+                        <div class ="question"> <p>Eyelid erythema?</p></div>
+                        <div class = "questionyesno">
+                        <label>
+                    <input  type="radio"  name = question4 value ="yes">
+                    <span class = "yes_span" >yes</span>
+                        </label>
+                        <label>
+                        <input  type="radio"  name = question4 value ="no">
+                        <span class = "no_span" >no</span>
+                            </label>
+                        </div>
+                        </div>
+
+     <div class = "questioncontainer">
+                            <div class ="question"> <p>Conjunctiva redness?</p></div>
+                            <div class = "questionyesno">
+                            <label>
+                        <input  type="radio"  name = question5 value ="yes">
+                        <span class = "yes_span" >yes</span>
+                            </label>
+                            <label>
+                            <input  type="radio"  name = question5 value ="no">
+                            <span class = "no_span" >no</span>
+                                </label>
+                            </div>
+                            </div>
+
+    <div class = "questioncontainer">
+                                <div class ="question"> <p>Chemosis?</p></div>
+                                <div class = "questionyesno">
+                                <label>
+                            <input  type="radio"  name = question6 value ="yes">
+                            <span class = "yes_span" >yes</span>
+                                </label>
+                                <label>
+                                <input  type="radio"  name = question6 value ="no">
+                                <span class = "no_span" >no</span>
+                                    </label>
+                                </div>
+                                </div>
+
+ <div class = "questioncontainer">
+                                    <div class ="question"> <p>Inflammation of caruncle of plica?</p></div>
+                                    <div class = "questionyesno">
+                                    <label>
+                                <input  type="radio"  name = question7 value ="yes">
+                                <span class = "yes_span" >yes</span>
+                                    </label>
+                                    <label>
+                                    <input  type="radio"  name = question7 value ="no">
+                                    <span class = "no_span" >no</span>
+                                        </label>
+                                    </div>
+                                    </div>
+
+<div class = "questioncontainer">
+                                        <div class ="question"> <p>Increase of >2mm proptosis?</p></div>
+                                        <div class = "questionyesno">
+                                        <label>
+                                    <input  type="radio"  name = question8 value ="yes">
+                                    <span class = "yes_span" >yes</span>
+                                        </label>
+                                        <label>
+                                        <input  type="radio"  name = question8 value ="no">
+                                        <span class = "no_span" >no</span>
+                                            </label>
+                                        </div>
+                                        </div>
+
+ <div class = "questioncontainer">
+                                            <div class ="question"> <p>increase in uniocular excursion of >8 degrees?</p></div>
+                                            <div class = "questionyesno">
+                                            <label>
+                                        <input  type="radio"  name = question9 value ="yes">
+                                        <span class = "yes_span" >yes</span>
+                                            </label>
+                                            <label>
+                                            <input  type="radio"  name = question9 value ="no">
+                                            <span class = "no_span" >no</span>
+                                                </label>
+                                            </div>
+                                            </div>
+
+ <div class = "questioncontainer">
+                                                <div class ="question"> <p>Decrease visual acuity of 1 or more snellen line?</p></div>
+                                                <div class = "questionyesno">
+                                                <label>
+                                            <input  type="radio"  name = question10 value ="yes">
+                                            <span class = "yes_span" >yes</span>
+                                                </label>
+                                                <label>
+                                                <input  type="radio"  name = question10 value ="no">
+                                                <span class = "no_span" >no</span>
+                                                    </label>
+                                                </div>
+                                                </div>
+
+
+
+
+<input class = "checkbutton" type = "button" value = " >> Check" onclick = "check();">
+</form>
+
+<div  class = "result_bar" >
+    <h4 id ="after_submit_invisible" >Result: </h4>
+    <div class = "result_points" id ="after_submit">
+     <h4 id = "number_correct"></h4>
+
+    </div>
+    <div class = "result_message" id = "message_result"></div>
+</div>
+
+    <div class = "management" >Management</div>
+
+    <div  class = "active_notice"  >
+        <div id = "message_nextstep" ></div>
+
+
+
+    </div>
+    
+
+
+
+
+
+
+
+    
+</div>
+</div>
+</html>
+
+</body>
+
+

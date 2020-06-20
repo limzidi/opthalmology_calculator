@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>EUGOGO</title>
+<link href ="style.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src = "eugogo.js"></script>
+
+</head>
+
+
+<body>
+
+<div class ="header1"></div>
+
+<div class = "maincal">
+<div class ="sidecolumn"></div>
+<div class = "maincolumn">
+    <h1>EUGOGO Severity Score</h1>
+    <div class = "whentousecolumn"><p>When to use</p></div>
+
+    <form id="quiz" name = "quiz">
+    <div class = "questioncontainer">
+            <div class ="question"> <p>Eyelid retraction </p></div>
+            <div class = "questionyesno">
+            <label>
+        <input  type="radio"  name = question1 value ="yes">
+        <span class = "yes_span">1mm or less</span>
+            </label>
+            <label>
+            <input  type="radio"  name = question1 value ="no">
+            <span class = "no_span" >2mm or more</span>
+                </label>
+            </div>
+            </div>
+    <div class = "questioncontainer">
+                <div class ="question"> <p>Exophthalmos</p></div>
+                <div class = "questionyesno">
+                <label>
+            <input  type="radio"  name = question2 value ="yes">
+            <span class = "yes_span" >2mm or less</span>
+                </label>
+                <label>
+                <input  type="radio"  name = question2 value ="no">
+                <span class = "no_span" >3mm or more</span>
+                    </label>
+                </div>
+                </div>
+
+    <div class = "questioncontainer">
+                    <div class ="question"> <p>Soft-tissue involvement</p></div>
+                    <div class = "questionyesno">
+                    <label>
+                <input  type="radio"  name = question3 value ="yes">
+                <span class = "yes_span" >mild</span>
+                    </label>
+                    <label>
+                    <input  type="radio"  name = question3 value ="no">
+                    <span class = "no_span" >moderate to severe</span>
+                        </label>
+                    </div>
+                    </div>
+
+    <div class = "questioncontainer">
+                        <div class ="question"> <p>Extraocular muscle involvement (diplopia)</p></div>
+                        <div class = "questionyesno">
+                        <label>
+                    <input  type="radio"  name = question4 value ="yes">
+                    <span class = "yes_span" >none or intermitten</span>
+                        </label>
+                        <label>
+                        <input  type="radio"  name = question4 value ="no">
+                        <span class = "no_span" >inconstant or constant</span>
+                            </label>
+                        </div>
+                        </div>
+
+     <div class = "questioncontainer">
+                            <div class ="question"> <p>Corneal involvement</p></div>
+                            <div class = "questionyesno">
+                            <label>
+                        <input  type="radio"  name = question5 value ="yes">
+                        <span class = "yes_span" >absent or mild</span>
+                            </label>
+                            <label>
+                            <input  type="radio"  name = question5 value ="no">
+                            <span class = "no_span" >moderate</span>
+                                </label>
+                            </div>
+                            </div>
+
+    
+
+<input class = "checkbutton" type = "button" value = " >> Check" onclick = "check();">
+</form>
+
+<div  class = "result_bar" >
+    <h4 id ="after_submit_invisible" >Result: </h4>
+    <div class = "result_points" id ="after_submit">
+     <h4 id = "number_correct"></h4>
+
+    </div>
+    <div class = "result_message" id = "message_result"></div>
+</div>
+
+    <div class = "management" >Management</div>
+
+    <div  class = "active_notice"  >
+        <div id = "message_nextstep" ></div>
+
+
+
+    </div>
+    
+
+
+    
+</div>
+</div>
+</html>
+
+</body>
