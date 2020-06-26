@@ -1,153 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>Clinical Activity Score (CAS) Calculator</title>
-<link href ="style.css" rel ="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-<script src = "CAS1.js"></script>
+    <title>Clinical Activity Score (CAS) Calculator</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="CAS1.js"></script>
 
 </head>
 
 
 <body>
 
-<div class ="header1"></div>
+    <div class="header1"></div>
 
-<div class = "maincal">
-<div class ="sidecolumn"></div>
-<div class = "maincolumn">
-    <h1>Clinical Activity Score (CAS) Calculator</h1>
-    <div class = "whentousecolumn"><p>When to use</p></div>
-
-    <form id="quiz" name = "quiz">
-    <div class = "questioncontainer">
-            <div class ="question"> <p>Spontaneous eye pain?</p></div>
-            <div class = "questionyesno">
-            <label>
-        <input  type="radio"  name = question1 value ="yes">
-        <span class = "yes_span" >yes</span>
-            </label>
-            <label>
-            <input  type="radio"  name = question1 value ="no">
-            <span class = "no_span" >no</span>
-                </label>
+    <div class="maincal">
+        <div class="sidecolumn"></div>
+        <div class="maincolumn">
+            <h1>Clinical Activity Score (CAS) Calculator</h1>
+            <div class="whentousecolumn">
+                <p>When to use</p>
             </div>
-            </div>
-    <div class = "questioncontainer">
-                <div class ="question"> <p>Evoke eye pain?</p></div>
-                <div class = "questionyesno">
-                <label>
-            <input  type="radio"  name = question2 value ="yes">
-            <span class = "yes_span" >yes</span>
-                </label>
-                <label>
-                <input  type="radio"  name = question2 value ="no">
-                <span class = "no_span" >no</span>
-                    </label>
-                </div>
-                </div>
-
-    <div class = "questioncontainer">
-                    <div class ="question"> <p>Eyelid Swelling?</p></div>
-                    <div class = "questionyesno">
-                    <label>
-                <input  type="radio"  name = question3 value ="yes">
-                <span class = "yes_span" >yes</span>
-                    </label>
-                    <label>
-                    <input  type="radio"  name = question3 value ="no">
-                    <span class = "no_span" >no</span>
-                        </label>
-                    </div>
-                    </div>
-
-    <div class = "questioncontainer">
-                        <div class ="question"> <p>Eyelid erythema?</p></div>
-                        <div class = "questionyesno">
-                        <label>
-                    <input  type="radio"  name = question4 value ="yes">
-                    <span class = "yes_span" >yes</span>
-                        </label>
-                        <label>
-                        <input  type="radio"  name = question4 value ="no">
-                        <span class = "no_span" >no</span>
-                            </label>
+            <div class="question_column">
+                <form id="quiz" name="quiz">
+                    <div class="questioncontainer">
+                        <div class="question">
+                            <p>Spontaneous eye pain?</p>
                         </div>
-                        </div>
-
-     <div class = "questioncontainer">
-                            <div class ="question"> <p>Conjunctiva redness?</p></div>
-                            <div class = "questionyesno">
+                        <div class="questionyesno">
                             <label>
-                        <input  type="radio"  name = question5 value ="yes">
-                        <span class = "yes_span" >yes</span>
+                                <input type="radio" name=question1 value="yes" checked="checked">
+                                <span class="yes_span">yes</span>
                             </label>
                             <label>
-                            <input  type="radio"  name = question5 value ="no">
-                            <span class = "no_span" >no</span>
-                                </label>
-                            </div>
-                            </div>
+                                <input type="radio" name=question1 value="no">
+                                <span class="no_span">no</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="questioncontainer">
+                        <div class="question">
+                            <p>Evoke eye pain?</p>
+                        </div>
+                        <div class="questionyesno">
+                            <label>
+                                <input type="radio" name=question2 value="yes" checked="checked">
+                                <span class="yes_span">yes</span>
+                            </label>
+                            <label>
+                                <input type="radio" name=question2 value="no">
+                                <span class="no_span">no</span>
+                            </label>
+                        </div>
+                    </div>
 
-    <div class = "questioncontainer">
-                                <div class ="question"> <p>chemosis?</p></div>
-                                <div class = "questionyesno">
-                                <label>
-                            <input  type="radio"  name = question6 value ="yes">
-                            <span class = "yes_span" >yes</span>
-                                </label>
-                                <label>
-                                <input  type="radio"  name = question6 value ="no">
-                                <span class = "no_span" >no</span>
-                                    </label>
-                                </div>
-                                </div>
+                    <div class="questioncontainer">
+                        <div class="question">
+                            <p>Eyelid Swelling?</p>
+                        </div>
+                        <div class="questionyesno">
+                            <label>
+                                <input type="radio" name=question3 value="yes" checked="checked">
+                                <span class="yes_span">yes</span>
+                            </label>
+                            <label>
+                                <input type="radio" name=question3 value="no">
+                                <span class="no_span">no</span>
+                            </label>
+                        </div>
+                    </div>
 
- <div class = "questioncontainer">
-                                    <div class ="question"> <p>Inflammation of caruncle of plica ?</p></div>
-                                    <div class = "questionyesno">
-                                    <label>
-                                <input  type="radio"  name = question7 value ="yes">
-                                <span class = "yes_span" >yes</span>
-                                    </label>
-                                    <label>
-                                    <input  type="radio"  name = question7 value ="no">
-                                    <span class = "no_span" >no</span>
-                                        </label>
-                                    </div>
-                                    </div>
+                    <div class="questioncontainer">
+                        <div class="question">
+                            <p>Eyelid erythema?</p>
+                        </div>
+                        <div class="questionyesno">
+                            <label>
+                                <input type="radio" name=question4 value="yes" checked="checked">
+                                <span class="yes_span">yes</span>
+                            </label>
+                            <label>
+                                <input type="radio" name=question4 value="no">
+                                <span class="no_span">no</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="questioncontainer">
+                        <div class="question">
+                            <p>Conjunctiva redness?</p>
+                        </div>
+                        <div class="questionyesno">
+                            <label>
+                                <input type="radio" name=question5 value="yes" checked="checked">
+                                <span class="yes_span">yes</span>
+                            </label>
+                            <label>
+                                <input type="radio" name=question5 value="no">
+                                <span class="no_span">no</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="questioncontainer">
+                        <div class="question">
+                            <p>chemosis?</p>
+                        </div>
+                        <div class="questionyesno">
+                            <label>
+                                <input type="radio" name=question6 value="yes" checked="checked">
+                                <span class="yes_span">yes</span>
+                            </label>
+                            <label>
+                                <input type="radio" name=question6 value="no">
+                                <span class="no_span">no</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="questioncontainer">
+                        <div class="question">
+                            <p>Inflammation of caruncle of plica ?</p>
+                        </div>
+                        <div class="questionyesno">
+                            <label>
+                                <input type="radio" name=question7 value="yes" checked="checked">
+                                <span class="yes_span">yes</span>
+                            </label>
+                            <label>
+                                <input type="radio" name=question7 value="no">
+                                <span class="no_span">no</span>
+                            </label>
+                        </div>
+                    </div>
 
 
-<input class = "checkbutton" type = "button" value = " >> Check" onclick = "check();">
-</form>
+                    <input class="checkbutton" type="button" value=" >> Check" onclick="check();">
+                </form>
+            </div>
+            <div class="result_bar">
+                <h4 id="after_submit_invisible">Result: </h4>
+                <div class="result_points" id="after_submit">
+                    <h4 id="number_correct"></h4>
 
-<div  class = "result_bar" >
-    <h4 id ="after_submit_invisible" >Result: </h4>
-    <div class = "result_points" id ="after_submit">
-     <h4 id = "number_correct"></h4>
+                </div>
+                <div class="result_message" id="message_result"></div>
+            </div>
 
+            <div class="management">Management</div>
+
+            <div class="active_notice">
+                <div id="message_nextstep"></div>
+
+
+
+            </div>
+
+
+
+
+        </div>
     </div>
-    <div class = "result_message" id = "message_result"></div>
-</div>
 
-    <div class = "management" >Management</div>
-
-    <div  class = "active_notice"  >
-        <div id = "message_nextstep" ></div>
-
-
-
-    </div>
-    
-
-
-    
-</div>
-</div>
 </html>
 
 </body>
-
-
-

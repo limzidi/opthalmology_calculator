@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Clinical Activity Score (CAS) Calculator</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="child_refraction.js"></script>
+
+</head>
+
+
+<body>
+
+    <div class="header1"></div>
+
+    <div class="maincal">
+        <div class="sidecolumn"></div>
+        <div class="maincolumn">
+            <h1>Child Refraction</h1>
+            <div class="whentousecolumn">
+                <p>When to use</p>
+            </div>
+            <div class="question_column">
+                <form id="quiz" name="quiz">
+                    <div class="questioncontainer">
+
+                        <div class="questionyesno">
+                            <p>Age</p>
+                        </div>
+                        <div style="display:flex">
+                            <input class="input_box" type="text" autocomplete="off" id="age" placeholder="eg 1-17"
+                                name=age value ="1">
+                            <div class="small_box"><span> Year</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questioncontainer">
+
+                        <div class="questionyesno">
+                            <p>RE Best Corrected VA</p>
+                        </div>
+                        <div class="wrapper_input">
+                            <div class="front_box"><span>6 /</span>
+                            </div>
+                            <input list="VA" name="RBCVA" type="text" class="input_box" id="RBCVA"
+                                style="border-left: 0; border-radius: 0" value="6" />
+
+                            <datalist id="RBCVA">
+                                <option value=6>
+                                <option value=9>
+                                <option value=12>
+                                <option value=18>
+                                <option value=24>
+                                <option value=36>
+                                <option value=60>
+                                <option value=120>
+                            </datalist>
+                            <div class="small_box"><span> meter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questioncontainer">
+
+                        <div class="questionyesno">
+                            <p>LE best Corrected VA</p>
+                        </div>
+                        <div class="wrapper_input">
+                            <div class="front_box"><span>6 /</span>
+                            </div>
+                            <input list="VA" name="LBCVA" type="text" class="input_box" id="LBCVA"
+                                style="border-left: 0; border-radius: 0" value="6" />
+
+                            <datalist id="VA">
+                                <option value=6>
+                                <option value=9>
+                                <option value=12>
+                                <option value=18>
+                                <option value=24>
+                                <option value=36>
+                                <option value=60>
+                                <option value=120>
+                            </datalist>
+                            <div class="small_box"><span> meter</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="questioncontainer">
+                        <div class="question">
+                            <p>Squint</p>
+                        </div>
+                        <div class="questionyesno">
+                            <label>
+                                <input type="radio" name=squint value="yes">
+                                <span class="yes_span">yes</span>
+                            </label>
+                            <label>
+                                <input type="radio" name=squint value="no" checked= "checked">
+                                <span class="no_span">no</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="questioncontainer">
+
+                        <div class="questionyesno">
+                            <p>RE spherical power</p>
+                        </div>
+                        <div style="display:flex">
+                            <input class="input_box" type="text" autocomplete="off" id="REspherical"
+                                placeholder="eg 2.00 or -2.00" >
+                            <div class="small_box"><span> D</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="questioncontainer">
+
+                        <div class="questionyesno">
+                            <p>RE cylinder power</p>
+                        </div>
+                        <div style="display:flex">
+                            <input class="input_box" type="text" autocomplete="off" id="REcylinder"
+                                placeholder="eg 2.00 or -2.00">
+                            <div class="small_box"><span> D</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questioncontainer">
+
+                        <div class="questionyesno">
+                            <p>LE spherical power</p>
+                        </div>
+                        <div style="display:flex">
+                            <input class="input_box" type="text" autocomplete="off" id="LEspherical"
+                                placeholder="eg 2.00 or -2.00">
+                            <div class="small_box"><span> D</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="questioncontainer">
+
+                        <div class="questionyesno">
+                            <p>LE cylinder power</p>
+                        </div>
+                        <div style="display:flex">
+                            <input class="input_box" type="text" autocomplete="off" id="LEcylinder"
+                                placeholder="eg 2.00 or -2.00">
+                            <div class="small_box"><span> D</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <input class="checkbutton" type="button" value=" >> Check" onclick="check();">
+                </form>
+            </div>
+            <div class="result_bar">
+                <h4 id="after_submit_invisible">Result: </h4>
+                <div class="result_points" id="after_submit">
+                </div>
+                <div class="result_message" id="message_result"></div>
+                <div class="result_message" id="message_outcome"></div>
+                <div class="result_message" id="message_astigmatism"></div>
+                <div class="result_message" id="message_squint"></div>
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="management">Management</div>
+
+            <div class="active_notice">
+                <div id="message_persrciption"></div>
+                <div  id="message_reason"></div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+</html>
+
+</body>
