@@ -1,6 +1,4 @@
 
-
-
 function check() {
 
     var age = document.quiz.age.value;
@@ -12,6 +10,7 @@ function check() {
     var LEcylinder = document.quiz.LEcylinder.value;
     var LEspherical = document.quiz.LEspherical.value;
     var astigmatism = REcylinder - LEcylinder
+    var anisoastigmatism = (astigmatism>=1.5 || astigmatism <=-1.5 )
     var spherical = REspherical - LEspherical 
     var anisometropia = (spherical >=2 || spherical <=-2)      
 
@@ -31,28 +30,31 @@ function check() {
       var outcome = [ "" ,
       "Both eye myopia",
       "Both eye hyperopia",
-      "Both eye hyperopia with anisometropia (>2D)", 
+      "", 
       "Both eye emmetropia", 
       "Right eye myopia, left eye emmetropia",
        "Right eye hyperopia, left eye emmetropia", 
        "Left eye myopia, right eye emmetropia", 
        "Left eye hyperopia, right eye emmetropia"]
+
       var msg_astigmatism = [
           "", 
-          "Aniso-astigmatism (>1D)",
-           "Aniso-astigmatism (>2D)", 
-           "Aniso-astigmatism (>3D)" ]
+          "Aniso-astigmatism (>1.5D)",
+           "Astigmatism same or more than 3D in 1-3 yo", 
+           "Astigmatism same or more than 2D in 4-5 yo",
+           "Astigmatism same or more than 1D in child same more than 6 yo" ]
+
       var reason = ["",
-    "( Myopia same or more than -3D in 1-3 yo)", 
-    "( Hyperopia same or more than +4D in 1-3 yo)",
-    "( Hyperopia with anisometropia more than 2D )",
-    "( Hyperopia with esotropia )",
-    "( Myopia same or more than -2D in 4-5 yo )",
-    "( Hyperopia same or more than +3D in 4-5 yo )",
-    "( Myopia same or more than -1D in 5-7 yo )",
-    "( Hyperopia same or more than +2.5D in 6-7 yo )",
-    "( Myopia or hyperopia in 7 yo and above )",
-    "( Myopia same or more than -5D in infant less than 1 yo )"]
+    " Myopia same or more than -3D in 1-3 yo", 
+    " Hyperopia same or more than +4D in 1-3 yo",
+    " Hyperopia with anisometropia more than 2D",
+    " Hyperopia with esotropia",
+    " Myopia same or more than -2D in 4-5 yo",
+    " Hyperopia same or more than +3D in 4-5 yo",
+    " Myopia same or more than -1D in 5-7 yo",
+    " Hyperopia same or more than +2.5D in 6-7 yo",
+    " Myopia or hyperopia in 7 yo and above",
+    " Myopia same or more than -5D in infant less than 1 yo"]
       
       
       var score_amblyopia;
@@ -119,8 +121,7 @@ function check() {
                         if (REspherical>0 || LEspherical >0 && squint =="yes"){
                             score_persciption = 4 , score_reason= 0,  score_outcome = 7, score_squint = 1}
                     }
-                    if (astigmatism >-1 && astigmatism < 1){
-                        score_astigmatism = 0, score_anisometropia= 0}
+                    
                 
 
                         
@@ -153,7 +154,7 @@ function check() {
                             score_persciption = 1, score_reason= 3, score_outcome = 3, score_squint = 0}
 
                                 if (REspherical>=4 && LEspherical > 0 && !anisometropia ){
-                                    score_persciption = 2, score_reason= 2, score_outcome = 2, score_squint = 0, score_astigmatism=4}
+                                    score_persciption = 2, score_reason= 2, score_outcome = 2, score_squint = 0 }
 
                                     if (LEspherical>=4 && REspherical > 0 && !anisometropia){
                                         score_persciption = 2, score_reason= 2, score_outcome= 2, score_squint = 0}
@@ -183,13 +184,32 @@ function check() {
                                                             score_persciption = 0, score_reason= 0,  score_outcome = 7, score_squint = 0}
 
                                                             if (REspherical>=0 && LEspherical >=0 && squint =="yes"){
-                                                                score_persciption = 1 , score_reason= 0,  score_outcome = 0, score_squint = 1, score_astigmatism = 0}
-                                                                if (astigmatism <3 && astigmatism >-3 ){
-                                                                    score_astigmatism = 0, score_anisometropia= 0}
+                                                                score_persciption = 1 , score_reason= 0,  score_outcome = 0, score_squint = 1}
 
-                                                                    if (astigmatism <= -3 || astigmatism >= 3){
-                                                                        score_astigmatism = 3, score_anisometropia }
-                                                            
+                                                                if (astigmatism >= 1.5 || astigmatism <= -1.5){
+                                                                    score_astigmatism = 1, score_anisometropia= 1}
+
+                                                                    if (REcylinder>= 3 && LEcylinder>= 0 && !anisoastigmatism ){
+                                                                        score_astigmatism = 2 , score_anisometropia = 1}
+
+                                                                        
+
+                                                                        if (REcylinder>=0 && LEcylinder>= 3 && !anisoastigmatism){
+                                                                            score_astigmatism = 2 , score_anisometropia = 1}
+
+                                                                        if (REcylinder <= -3 && LEcylinder <=0 && !anisoastigmatism){
+                                                                            score_astigmatism = 2 , score_anisometropia = 1}
+
+                                                                            
+
+                                                                            if (REcylinder <= 0 && LEcylinder <=-3 && !anisoastigmatism){
+                                                                                score_astigmatism = 2 , score_anisometropia = 1}
+
+                                                                            if (REcylinder >-3 && REcylinder < 3 && REcylinder >-3 && REcylinder < 3 && !anisoastigmatism){
+                                                                                score_astigmatism = 0, score_anisometropia= 0}
+                                                                            
+
+
 
                 
                 
@@ -257,13 +277,30 @@ function check() {
                                                             if (REspherical>0 && LEspherical >0 && squint =="yes"){
                                                                 score_persciption = 1 , score_reason= 0,  score_outcome = 0, score_squint = 1,  score_astigmatism =0}
                 
-                                                                if (astigmatism >-2 && astigmatism < 2){
-                                                                    score_astigmatism = 0, score_anisometropia= 0}
+                            
 
-                                                                    if (astigmatism <= -2 || astigmatism >= 2 ) {
-                                                                        score_astigmatism = 2, score_anisometropia = 1
-                                                                    } 
-                                                            
+                                                                if (astigmatism >= 1.5 || astigmatism <= -1.5){
+                                                                    score_astigmatism = 1, score_anisometropia= 1}
+
+                                                                    if (REcylinder>= 2 && LEcylinder>= 0 && !anisoastigmatism ){
+                                                                        score_astigmatism = 3 , score_anisometropia = 1}
+
+                                                                        
+
+                                                                        if (REcylinder>=0 && LEcylinder>= 2 && !anisoastigmatism){
+                                                                            score_astigmatism = 3 , score_anisometropia = 1}
+
+                                                                        if (REcylinder <= -2 && LEcylinder <=0 && !anisoastigmatism){
+                                                                            score_astigmatism = 3 , score_anisometropia = 1}
+
+                                                                            
+
+                                                                            if (REcylinder <= 0 && LEcylinder <=-2 && !anisoastigmatism){
+                                                                                score_astigmatism = 3 , score_anisometropia = 1}
+
+                                                                            if (REcylinder >-2 && REcylinder < 2 && REcylinder >-2 && REcylinder < 2 && !anisoastigmatism){
+                                                                                score_astigmatism = 0, score_anisometropia= 0}
+                                                                            
 
             
                 
@@ -330,14 +367,27 @@ function check() {
                                                                 score_persciption = 1 , score_reason= 0,  score_outcome = 0, score_squint = 1, score_astigmatism = 0}
                 
 
-                                                                if (astigmatism >-1 && astigmatism < 1){
-                                                                    score_astigmatism = 0, score_anisometropia= 0}
+                                                                if (astigmatism >= 1.5 || astigmatism <= -1.5){
+                                                                    score_astigmatism = 1, score_anisometropia= 1}
 
-                                                                    if (astigmatism <= -1 || astigmatism >= 1){
-                                                                       score_astigmatism = 1, score_anisometropia = 1
-                                                                         
-                                                                }
-                                                            
+                                                                    if (REcylinder>= 1 && LEcylinder>= 0 && !anisoastigmatism ){
+                                                                        score_astigmatism = 4 , score_anisometropia = 1}
+
+                                                                        
+
+                                                                        if (REcylinder>=0 && LEcylinder>= 1 && !anisoastigmatism){
+                                                                            score_astigmatism = 4 , score_anisometropia = 1}
+
+                                                                        if (REcylinder <= -1 && LEcylinder <=0 && !anisoastigmatism){
+                                                                            score_astigmatism = 4 , score_anisometropia = 1}
+
+                                                                            
+
+                                                                            if (REcylinder <= 0 && LEcylinder <=-1 && !anisoastigmatism){
+                                                                                score_astigmatism = 4 , score_anisometropia = 1}
+
+                                                                            if (REcylinder >-1 && REcylinder < 1 && REcylinder >-1 && REcylinder < 1 && !anisoastigmatism){
+                                                                                score_astigmatism = 0, score_anisometropia= 0}
                 
                 
 
@@ -345,22 +395,41 @@ function check() {
 
 
         if (age > 7){
-            if ( REspherical != 0 && LEspherical != 0){
+            if ( REspherical != 0 && LEspherical != 0 ){
                 score_persciption = 1, score_reason= 9,  score_outcome = 0, score_squint = 0 }
-                if (LEspherical>0 && LEspherical-(REspherical) >= 2 && LEspherical-(REspherical) <= -2 ){
-                    score_persciption = 0, score_reason= 0,  score_outcome = 3, score_squint = 0 }
-                    if (REspherical>0 && LEspherical-(REspherical) >= 2 && LEspherical-(REspherical) <= -2 ){
-                        score_persciption = 0, score_reason= 0,  score_outcome = 3, score_squint = 0 }
-                        if (REspherical>0 || LEspherical >0 && squint =="yes"){
-                            score_persciption = 1 , score_reason= 0,  score_outcome = 0, score_squint = 1, score_astigmatism = 4}
-                            if ( REspherical == 0 && LEspherical == 0){
-                                score_persciption = 0, score_reason= 0,  score_outcome = 4, score_squint = 0 }
-                        
-        }
-        if (astigmatism >-1 && astigmatism < 1){
-            score_astigmatism = 0, score_anisometropia= 0}
+
     
 
+                        if (REspherical>0 && LEspherical >0 && squint =="yes"){
+                            score_persciption = 1 , score_reason= 0,  score_outcome = 3, score_squint = 1, score_astigmatism = 4}
+
+                            if ( REspherical == 0 && LEspherical == 0){
+                                score_persciption = 0, score_reason= 0,  score_outcome = 4, score_squint = 0 }
+
+                                if (astigmatism >= 1.5 || astigmatism <= -1.5){
+                                    score_astigmatism = 1, score_anisometropia= 1}
+
+                                    if (REcylinder>= 1 && LEcylinder>= 0 && !anisoastigmatism ){
+                                        score_astigmatism = 4 , score_anisometropia = 1}
+
+                                        
+
+                                        if (REcylinder>=0 && LEcylinder>= 1 && !anisoastigmatism){
+                                            score_astigmatism = 4 , score_anisometropia = 1}
+
+                                        if (REcylinder <= -1 && LEcylinder <=0 && !anisoastigmatism){
+                                            score_astigmatism = 4 , score_anisometropia = 1}
+
+                                            
+
+                                            if (REcylinder <= 0 && LEcylinder <=-1 && !anisoastigmatism){
+                                                score_astigmatism = 4 , score_anisometropia = 1}
+
+                                            if (REcylinder >-1 && REcylinder < 1 && REcylinder >-1 && REcylinder < 1 && !anisoastigmatism){
+                                                score_astigmatism = 0, score_anisometropia= 0}
+                        
+        }
+       
 
 
     
