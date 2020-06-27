@@ -152,7 +152,7 @@ function check() {
                                                         score_persciption = 1, score_reason= 1, score_outcome = 5, score_squint = 0}
                                                         if (REspherical >-3 && REspherical <0 && LEspherical == 0){
                                                             score_persciption = 0, score_reason= 0,  score_outcome = 7, score_squint = 0}
-                                                            if (REspherical>0 || LEspherical >0 && squint =="yes"){
+                                                            if (REspherical>0 && LEspherical >0 && squint =="yes"){
                                                                 score_persciption = 4 , score_reason= 0,  score_outcome = 0, score_squint = 1, score_astigmatism = 4}
 
                 
@@ -200,7 +200,7 @@ function check() {
                                                         score_persciption = 1, score_reason= 5,  score_outcome = 5, score_squint = 0}
                                                         if (REspherical >-2 && REspherical <0 && LEspherical == 0){
                                                             score_persciption = 0, score_reason= 0,  score_outcome = 7, score_squint = 0}
-                                                            if (REspherical>0 || LEspherical >0 && squint =="yes"){
+                                                            if ((REspherical>0 || LEspherical >0) && squint =="yes"){
                                                                 score_persciption = 4 , score_reason= 0,  score_outcome = 0, score_squint = 1, score_astigmatism = 4}
 
                 
