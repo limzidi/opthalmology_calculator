@@ -24,30 +24,28 @@
             </div>
             <div class="question_column">
                 <form id="quiz" name="quiz">
-                    <div class="questioncontainer">
 
-                        <div class="questionyesno">
-                            <p>Age</p>
-                        </div>
-                        <div style="display:flex">
+
+                    <div class="questioncontainer">
+                       <div class="question"> <p>Age</p> </div>
+                            
+                        
+                        <div class="wraping_input">
                             <input class="input_box" type="text" autocomplete="off" id="age" placeholder="eg 1-17"
                                 name=age value ="1">
-                            <div class="small_box"><span> Years</span>
-                            </div>
+                        
+                            <div class="small_box"><span> Years</span></div>
                         </div>
                     </div>
 
                     <div class="questioncontainer">
-
-                        <div class="questionyesno">
+                        <div class="question">
                             <p>RE Best Corrected VA</p>
                         </div>
-                        <div class="wrapper_input">
-                            <div class="front_box"><span>6 /</span>
-                            </div>
+                        <div class ="wraping_input" >
+                            <div class="front_box"><span> 6/ </span></div>
                             <input list="VA" name="RBCVA" type="text" class="input_box" id="RBCVA"
                                 style="border-left: 0; border-radius: 0" value="6" />
-
                             <datalist id="RBCVA">
                                 <option value=6>
                                 <option value=9>
@@ -58,23 +56,20 @@
                                 <option value=60>
                                 <option value=120>
                             </datalist>
-                            <div class="small_box"><span> meter</span>
+                            <div class="small_box"><span> meter</span></div>
                             </div>
-                        </div>
                     </div>
 
+                   
                     <div class="questioncontainer">
-
-                        <div class="questionyesno">
-                            <p>LE best Corrected VA</p>
+                        <div class="question">
+                            <p>LE Best Corrected VA</p>
                         </div>
-                        <div class="wrapper_input">
-                            <div class="front_box"><span>6 /</span>
-                            </div>
+                            <div class ="wraping_input" >
+                            <div class="front_box"><span>6 /</span></div>
                             <input list="VA" name="LBCVA" type="text" class="input_box" id="LBCVA"
                                 style="border-left: 0; border-radius: 0" value="6" />
-
-                            <datalist id="VA">
+                            <datalist id="LBCVA">
                                 <option value=6>
                                 <option value=9>
                                 <option value=12>
@@ -84,9 +79,8 @@
                                 <option value=60>
                                 <option value=120>
                             </datalist>
-                            <div class="small_box"><span> meter</span>
+                            <div class="small_box"><span> meter</span></div>
                             </div>
-                        </div>
                     </div>
 
 
@@ -110,10 +104,10 @@
 
                     <div class="questioncontainer">
 
-                        <div class="questionyesno">
+                        <div class="question">
                             <p>RE spherical power</p>
                         </div>
-                        <div style="display:flex">
+                        <div style="display:flex" class ="wraping_input">
                             <input class="input_box" type="text" autocomplete="off" id="REspherical"
                                 placeholder="eg 2.00 or -2.00" >
                             <div class="small_box"><span> D</span>
@@ -123,24 +117,25 @@
 
 
                     <div class="questioncontainer">
-
-                        <div class="questionyesno">
+                    
+                        <div class="question">
                             <p>RE cylinder power</p>
                         </div>
-                        <div style="display:flex">
+                        <div style="display:flex" class ="wraping_input">
                             <input class="input_box" type="text" autocomplete="off" id="REcylinder"
                                 placeholder="eg 2.00 or -2.00">
                             <div class="small_box"><span> D</span>
                             </div>
-                        </div>
+                        
+                    </div>
                     </div>
 
                     <div class="questioncontainer">
 
-                        <div class="questionyesno">
+                        <div class="question">
                             <p>LE spherical power</p>
                         </div>
-                        <div style="display:flex">
+                        <div style="display:flex" class ="wraping_input">
                             <input class="input_box" type="text" autocomplete="off" id="LEspherical"
                                 placeholder="eg 2.00 or -2.00">
                             <div class="small_box"><span> D</span>
@@ -151,10 +146,10 @@
 
                     <div class="questioncontainer">
 
-                        <div class="questionyesno">
+                        <div class="question">
                             <p>LE cylinder power</p>
                         </div>
-                        <div style="display:flex">
+                        <div style="display:flex" class ="wraping_input">
                             <input class="input_box" type="text" autocomplete="off" id="LEcylinder"
                                 placeholder="eg 2.00 or -2.00">
                             <div class="small_box"><span> D</span>
