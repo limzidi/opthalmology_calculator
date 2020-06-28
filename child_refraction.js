@@ -23,7 +23,7 @@ function check() {
 
   var persciption = [
     " Spherical correction not needed unless there is presence of amblyopia",
-    "Full spherical correction needed",
+    "Full spherical correction needed ",
     "Partial spherical correction needed (under correct by +1.50/+2.00) unless presence of amblyopia then full correction needed.",
     "Partial spherical correction needed (under correct by +1.00 ) unless presence of amblyopia then full correction needed.",
     "",
@@ -42,24 +42,24 @@ function check() {
 
   var msg_astigmatism = [
     "",
-    "Aniso-astigmatism (>1.5D)",
-    "Astigmatism same or more than 3D in 1-3 yo",
-    "Astigmatism same or more than 2D in 4-5 yo",
-    "Astigmatism same or more than 1D in child same more than 6 yo",
+    "Aniso-astigmatism ≥ 1.5D",
+    "Astigmatism ≥ 3D in 1-3 yo",
+    "Astigmatism ≥ 2D in 4-5 yo",
+    "Astigmatism ≥ 1D in child 6 yo and above",
   ];
 
   var reason = [
     "",
-    " Myopia same or more than -3D in 1-3 yo",
-    " Hyperopia same or more than +4D in 1-3 yo",
-    " Hyperopia with anisometropia more than 2D",
+    " Myopia ≥ -3D in 1-3 yo",
+    " Hyperopia ≥ +4D in 1-3 yo",
+    " Hyperopia with anisometropia > 2D",
     " Hyperopia with esotropia",
-    " Myopia same or more than -2D in 4-5 yo",
-    " Hyperopia same or more than +3D in 4-5 yo",
-    " Myopia same or more than -1D in 5-7 yo",
-    " Hyperopia same or more than +2.5D in 6-7 yo",
+    " Myopia ≥ -2D in 4-5 yo",
+    " Hyperopia ≥ +3D in 4-5 yo",
+    " Myopia ≥ -1D in 5-7 yo",
+    " Hyperopia ≥ +2.5D in 6-7 yo",
     " Myopia or hyperopia in 7 yo and above",
-    " Myopia same or more than -5D in infant less than 1 yo",
+    " Myopia ≥ -5D in infant less than 1 yo",
   ];
 
   var score_amblyopia;

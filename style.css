@@ -5,7 +5,8 @@
 		font-size: 14.5px;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-align: left;
+		text-align: center;
+		align-content: center;
 	}
 
 	h1 {
@@ -252,18 +253,20 @@ color : black;
   }
   
   .questionyesno {
-box-sizing: border-box;
-  flex: 0 0 50%;
-  min-height: 41px;
+	min-width: 50px;
+	width: 300px;
+	display:flex;
+}
   
   
  
-  }
+  
 
  .questionyesno label {
 
 	cursor: pointer;
-	width: 100%;
+	width: 150px;
+	
  }
 
  .questionyesno label input {
@@ -283,7 +286,7 @@ display: none;
   background-color: #f0f0f0;
   border: 1px solid silver;
   border-radius: 4px 0 0 4px;
-  
+  border-width:1px 0 1px 1px;
   box-shadow: none;
   box-sizing: border-box;
   color: #595959;
@@ -299,8 +302,11 @@ display: none;
   text-overflow: ellipsis;
   transition: all .15s;
   white-space: normal;
-  width: 49%;
-  margin: 0
+ width :100%;
+  
+
+  margin: 0;
+  
   
 	
 	
@@ -313,6 +319,7 @@ display: none;
   background-color: #f0f0f0;
   border: 1px solid silver;
   border-radius: 0 4px 4px 0;
+  border-width:1px 1px 1px 0;
   box-shadow: none;
   box-sizing: border-box;
   color: #595959;
@@ -328,8 +335,7 @@ display: none;
   text-overflow: ellipsis;
   transition: all .15s;
   white-space: normal;
-  width: 49%;
-  margin: 0;
+  width: 100%;
  
   }
 
