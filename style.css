@@ -74,8 +74,10 @@
 
 .question_column{
 
-	border-top: 1px solid #d7d7d7;
-  box-sizing: border-box;
+	box-sizing: border-box;
+  flex: 1 1 100%;
+  max-width: 610px;
+  width: 100%;;
 }
 
 .sidecolumn {
@@ -91,7 +93,9 @@
 
 .maincolumn {
 	box-sizing: border-box;
-  flex-direction: column;
+  flex: 1 1 100%;
+  max-width: 610px;
+  width: 100%;
 	order: 1
 
 }
@@ -228,7 +232,7 @@ color : black;
 	border-bottom: 1px solid #d7d7d7;
   box-sizing: border-box;
   display: flex;
-  padding: 8px 10px;
+  padding: 8px 0;
   width: 100%;
   }
 
@@ -240,6 +244,9 @@ color : black;
   flex: 1;
   min-height: 44px;
   padding-right: 5px;
+  min-width: 150px;
+  
+  
 	
 	
   }
@@ -247,8 +254,8 @@ color : black;
   .questionyesno {
 box-sizing: border-box;
   flex: 0 0 50%;
-  height: 41px;
-  width: 100%;
+  min-height: 41px;
+  
   
  
   }
@@ -553,23 +560,23 @@ margin: 20px 0 0 0;
 	.input_box {
 
 		border: 1px solid #d7d7d7;
-		border-radius: 4px 0 0 4px;
-		box-shadow: rgba(0,0,0,.1) 0 1px 3px inset;
-		box-sizing: border-box;
-		color: #595959;
-		flex: 1 1 auto;
-		font-family: Facit,Calibri,Helvetica,sans-serif;
-		font-size: 16px;
-		font-weight: 400;
-		height: 44px;
-		line-height: 47px;
-		margin: 0;
-		min-width: 0;
-		padding: 0 10px;
-		vertical-align: baseline;
-		width: 100%;
-	  
-
+  border-radius: 4px 0 0 4px;
+  box-shadow: rgba(0,0,0,.1) 0 1px 3px inset;
+  box-sizing: border-box;
+  color: #595959;
+  flex: 1 1 auto;
+  font-family: Facit,Calibri,Helvetica,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 44px;
+  line-height: 47px;
+  margin: 0;
+  min-width: 0;
+  padding: 0 10px;
+  vertical-align: baseline;
+  width: 100%;
+  text-align: center;
+  
 
 	}
 
@@ -594,41 +601,35 @@ margin: 20px 0 0 0;
 	}
 
 	.front_box{
-		border: 1px solid #d7d7d7;
+		align-self: stretch;
+		
+		border: 1px solid silver;
 		border-radius: 4px 0 0 4px;
-		box-shadow: rgba(0,0,0,.1) 0 1px 3px inset;
+		
+		box-shadow: none;
 		box-sizing: border-box;
 		color: #595959;
-		flex: 1 1 auto;
-		font-family: Facit,Calibri,Helvetica,sans-serif;
-		font-size: 15px;
-		font-weight: 400;
-		height: 44px;
-		line-height: 47px;
-		margin: 0;
-		min-width: 30%;
-		padding: 0 10px;
-		vertical-align: baseline;
-		text-align: center;
-		vertical-align: right;
-		border-right: 0;
+  box-sizing: border-box;
+  cursor: default;
+  display: inline-block;
+  flex: 0 0 auto;
+  height: 44px;
+  line-height: 47px;
+  padding: 0 10px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+  border-width:1px 0 1px 1px;
 		
 		
 
 
 	}
 
-	.wrapper_input {
-
-	display:flex;
-	float:left;
-  position:relative;  
+	.wraping_input{
+		min-width: 50px;
+		width: 300px;
+		display:flex;
 	}
 
-	 .wrapper_input .VA {
-		position:absolute;
-		left:10px;
-		top: 13px;
-		font-size: 14px ;
-		
-	  }
+	
